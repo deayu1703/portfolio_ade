@@ -40,7 +40,6 @@ portfolio_ade/
 ├── index.html
 ├── script.js
 ├── package.json
-└── README.md
 ```
 
 ## Menjalankan Project
