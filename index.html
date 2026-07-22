@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio Ade - Mahasiswi Teknik Informatika" />
+    <meta name="theme-color" content="#ec4899" />
+    <title>Ade - Portfolio</title>
+
+    <!-- Google Font: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS compiled via CLI -->
+    <link rel="stylesheet" href="./dist/output.css" />
+</head>
+
+<body class="font-sans antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300">
+
+    <!-- ================================================= -->
+    <!--                     HEADER                         -->
+    <!-- ================================================= -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800/50 transition-colors duration-300">
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex items-center justify-between h-16 md:h-20">
+
+                <!-- Logo -->
+                <div>
+                    <a href="#" class="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+                        Ade Ayu<span class="text-pink-500 dark:text-pink-400">.</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-2" aria-label="Navigasi utama">
+                    <a href="#home" class="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-pink-400 transition-colors">Home</a>
+                    <a href="#about" class="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-pink-400 transition-colors">About</a>
+                    <a href="#education" class="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-pink-400 transition-colors">Education</a>
+                    <a href="#skills" class="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-pink-400 transition-colors">Skills</a>
+                    <a href="#projects" class="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-pink-400 transition-colors">Projects</a>
+                    <a href="#certificates" class="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-pink-400 transition-colors">Certificates</a>
+                    <a href="#contact" class="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-pink-400 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Right side: Theme Toggle + Hamburger -->
+                <div class="flex items-center space-x-2">
+
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" type="button" class="p-2 rounded-full text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-pink-400 hover:bg-pink-50 dark:hover:bg-pink-950/30 transition-colors" aria-label="Toggle theme">
+
+                        <!-- Sun icon (visible in dark mode) -->
+                        <svg id="theme-icon-sun" class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+                        </svg>
+
+                        <!-- Moon icon (visible in light mode) -->
+                        <svg id="theme-icon-moon" class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                        </svg>
+
+                    </button>
+
+                    <!-- Hamburger Menu Button (Mobile) -->
+                    <button id="hamburger-btn" type="button" class="md:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-lg hover:bg-pink-50 dark:hover:bg-pink-950/30 transition-colors" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span class="block w-6 h-0.5 bg-gray-700 dark:bg-gray-300 rounded-full transition-all duration-300"></span>
+                        <span class="block w-6 h-0.5 bg-gray-700 dark:bg-gray-300 rounded-full transition-all duration-300"></span>
+                        <span class="block w-6 h-0.5 bg-gray-700 dark:bg-gray-300 rounded-full transition-all duration-300"></span>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out">
+                <nav class="flex flex-col space-y-1 py-4 border-t border-gray-200/50 dark:border-gray-800/50" aria-label="Navigasi mobile">
+                    <a href="#home" class="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 hover:bg-pink-50 dark:hover:bg-pink-950/20 rounded-lg transition-all">Home</a>
+                    <a href="#about" class="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 hover:bg-pink-50 dark:hover:bg-pink-950/20 rounded-lg transition-all">About</a>
+                    <a href="#education" class="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 hover:bg-pink-50 dark:hover:bg-pink-950/20 rounded-lg transition-all">Education</a>
+                    <a href="#skills" class="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 hover:bg-pink-50 dark:hover:bg-pink-950/20 rounded-lg transition-all">Skills</a>
+                    <a href="#projects" class="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 hover:bg-pink-50 dark:hover:bg-pink-950/20 rounded-lg transition-all">Projects</a>
+                    <a href="#certificates" class="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 hover:bg-pink-50 dark:hover:bg-pink-950/20 rounded-lg transition-all">Certificates</a>
+                    <a href="#contact" class="px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 hover:bg-pink-50 dark:hover:bg-pink-950/20 rounded-lg transition-all">Contact</a>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ================================================= -->
+    <!--                     MAIN CONTENT                   -->
+    <!-- ================================================= -->
+    <main>
+
+        <!-- ================================================= -->
+        <!--                  HERO SECTION                      -->
+        <!-- ================================================= -->
+        <section id="home" class="min-h-screen flex items-center pt-16 md:pt-20 bg-gradient-to-br from-white via-pink-50/30 to-pink-100/20 dark:from-gray-950 dark:via-gray-900/80 dark:to-gray-950 transition-colors duration-300">
+            <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+                    <!-- Hero Content - Left Column -->
+                    <div class="text-center lg:text-left order-2 lg:order-1">
+
+                        <!-- Greeting -->
+                        <span class="inline-block px-4 py-1.5 mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300 border border-pink-200/50 dark:border-pink-500/20">
+                            Halo, Saya
+                        </span>
+
+                        <!-- Name -->
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+                            <span class="bg-gradient-to-r from-pink-600 via-pink-500 to-pink-400 dark:from-pink-400 dark:via-pink-300 dark:to-pink-200 bg-clip-text text-transparent">
+                                Ade Ayu
+                            </span>
+                        </h1>
+
+                        <!-- Subheading / Typing Area -->
+                        <div class="mt-2 flex items-center lg:justify-start justify-center">
+                            <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300">
+                                <span id="typed-text">Mahasiswi Teknik Informatika</span>
+                                <span class="inline-block w-0.5 h-7 bg-pink-500 ml-1 align-middle animate-pulse"></span>
+                            </h2>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="mt-4 text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                            Mahasiswi Teknik Informatika dengan minat di pengembangan web dan teknologi. Berkomitmen untuk menciptakan solusi digital yang fungsional dan berdampak.
+                        </p>
+
+                        <!-- Buttons -->
+                        <div class="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
+
+                            <!-- Download CV Button -->
+                            <a href="assets/cv/cv_adeayu.pdf"
+                                    download
+                                    class="inline-flex items-center px-6 py-3 bg-pink-600 hover:bg-pink-700 dark:bg-pink-500 dark:hover:bg-pink-600 text-white font-semibold rounded-full shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transition-all duration-300">
+
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+
+                                Download CV
+                            </a>
+
+                            <!-- Contact Button -->
+                            <a href="#contact" class="inline-flex items-center px-6 py-3 border-2 border-pink-600 dark:border-pink-400 text-pink-600 dark:text-pink-400 hover:bg-pink-600 hover:text-white dark:hover:bg-pink-500 dark:hover:text-white font-semibold rounded-full transition-all duration-300">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                Contact Me
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Hero Image - Right Column -->
+                    <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+
+                        <div class="relative">
+
+                            <!-- Profile Image -->
+                            <div class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-pink-500/30 dark:border-pink-400/30 shadow-2xl shadow-pink-500/20 dark:shadow-pink-500/30">
+                                <img src="assets/images/profile.jpg" alt="Foto Profil Ade" class="w-full h-full object-cover" loading="lazy" />
+                            </div>
+
+                            <!-- Decorative Element: Top Right -->
+                            <div class="absolute -top-4 -right-4 w-20 h-20 bg-pink-400/20 dark:bg-pink-500/20 rounded-full blur-2xl"></div>
+
+                            <!-- Decorative Element: Bottom Left -->
+                            <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-pink-300/30 dark:bg-pink-400/20 rounded-full blur-2xl"></div>
+
+                            <!-- Decorative Element: Small Dot Top -->
+                            <div class="absolute top-1/4 -left-6 w-4 h-4 bg-pink-500 rounded-full opacity-60 dark:opacity-80 animate-pulse"></div>
+
+                            <!-- Decorative Element: Small Dot Bottom -->
+                            <div class="absolute bottom-1/4 -right-6 w-3 h-3 bg-pink-400 rounded-full opacity-60 dark:opacity-80"></div>
+
+                            <!-- Decorative Ring: Top Right -->
+                            <div class="absolute -top-8 -right-8 w-32 h-32 border-2 border-pink-300/30 dark:border-pink-400/20 rounded-full"></div>
+
+                            <!-- Decorative Ring: Bottom Left -->
+                            <div class="absolute -bottom-8 -left-8 w-40 h-40 border-2 border-pink-300/20 dark:border-pink-400/15 rounded-full"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================================================= -->
+        <!--                   ABOUT SECTION                    -->
+        <!-- ================================================= -->
+        <section id="about" class="py-16 md:py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
+            <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+                    <span class="inline-block text-sm font-semibold text-pink-600 dark:text-pink-400 uppercase tracking-wider mb-2">Tentang Saya</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
+                        Kenali <span class="text-pink-600 dark:text-pink-400">Saya</span>
+                    </h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-pink-500 to-pink-300 mx-auto mt-4 rounded-full"></div>
+                    <p class="mt-4 text-gray-600 dark:text-gray-400 text-lg">
+                        Sekilas perjalanan dan passion saya di dunia teknologi.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+                    <!-- About Image -->
+                    <div class="flex justify-center lg:justify-start">
+                        <div class="relative">
+                            <div class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-pink-500/30 dark:border-pink-400/30 shadow-2xl shadow-pink-500/20 dark:shadow-pink-500/30">
+                                <img src="assets/images/profile.jpg" alt="Foto Profil Ade" class="w-full h-full object-cover" loading="lazy" />
+                            </div>
+                            <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-pink-500 via-pink-400 to-pink-300 opacity-20 blur-xl -z-10"></div>
+                        </div>
+                    </div>
+
+                    <!-- About Content -->
+                    <div>
+
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                            Mahasiswi Teknik Informatika dengan <span class="text-pink-600 dark:text-pink-400">Passion</span> di Web Development
+                        </h3>
+
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                            Saya adalah mahasiswi Teknik Informatika yang memiliki ketertarikan mendalam dalam pengembangan web dan teknologi digital. Saat ini saya sedang menempuh pendidikan S1 di bidang Teknik Informatika, di mana saya terus mengasah kemampuan dalam pemrograman dan desain sistem.
+                        </p>
+
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                            Saya percaya bahwa teknologi dapat menjadi alat yang kuat untuk menciptakan dampak positif. Saya selalu antusias untuk belajar hal-hal baru dan mengerjakan proyek-proyek yang menantang.
+                        </p>
+
+                        <!-- Highlights -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+
+                            <div class="p-4 rounded-xl bg-pink-50/50 dark:bg-pink-950/20 border border-pink-100/50 dark:border-pink-800/30 text-center">
+                                <span class="block text-2xl font-bold text-pink-600 dark:text-pink-400">0</span>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Project</span>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-pink-50/50 dark:bg-pink-950/20 border border-pink-100/50 dark:border-pink-800/30 text-center">
+                                <span class="block text-2xl font-bold text-pink-600 dark:text-pink-400">11</span>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Sertifikat</span>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-pink-50/50 dark:bg-pink-950/20 border border-pink-100/50 dark:border-pink-800/30 text-center">
+                                <span class="block text-2xl font-bold text-pink-600 dark:text-pink-400">2</span>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Tools</span>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-pink-50/50 dark:bg-pink-950/20 border border-pink-100/50 dark:border-pink-800/30 text-center">
+                                <span class="block text-2xl font-bold text-pink-600 dark:text-pink-400">∞</span>
+                                <span class="text-sm text-gray-600 dark:text-gray-400">Semangat</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================================================= -->
+        <!--                  EDUCATION SECTION                 -->
+        <!-- ================================================= -->
+        <section id="education" class="py-16 md:py-24 bg-gray-50/80 dark:bg-gray-900/50 transition-colors duration-300">
+            <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+                    <span class="inline-block text-sm font-semibold text-pink-600 dark:text-pink-400 uppercase tracking-wider mb-2">Perjalanan</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
+                        Riwayat <span class="text-pink-600 dark:text-pink-400">Pendidikan</span>
+                    </h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-pink-500 to-pink-300 mx-auto mt-4 rounded-full"></div>
+                    <p class="mt-4 text-gray-600 dark:text-gray-400 text-lg">
+                        Langkah-langkah pendidikan yang membentuk perjalanan saya.
+                    </p>
+                </div>
+
+                <!-- Timeline -->
+                <div class="max-w-3xl mx-auto">
+
+                    <!-- SD -->
+                    <div class="relative pl-8 sm:pl-12 pb-10 border-l-2 border-pink-300/40 dark:border-pink-500/30 last:border-l-0 last:pb-0">
+
+                        <!-- Timeline Dot -->
+                        <div class="absolute left-[-9px] top-0 w-4 h-4 bg-pink-500 rounded-full border-2 border-white dark:border-gray-900"></div>
+
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 mb-2">
+                            <span class="text-sm font-semibold text-pink-600 dark:text-pink-400 bg-pink-50 dark:bg-pink-950/30 px-3 py-1 rounded-full inline-block w-fit">2012 - 2018</span>
+                            <h4 class="text-lg font-bold text-gray-900 dark:text-white">SD Negeri Kandang Panjang 03</h4>
+                        </div>
+
+                        <!-- Location -->
+                        <p class="mt-2 mb-3 text-sm text-gray-500 dark:text-gray-400">
+                            Desa Tajur Halang, Kecamatan Tajurhalang, Kabupaten Bogor, Jawa Barat.
+                        </p>
+
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Awal perjalanan pendidikan saya dimulai di SD Negeri Kandang Panjang 03, tempat saya belajar berbagai ilmu dasar serta membentuk semangat untuk terus belajar.
+                        </p>
+
+                        <!-- Deskripsi -->
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Awal perjalanan pendidikan saya dimulai di SD Negeri Kandang Panjang 03, tempat saya belajar berbagai ilmu dasar serta membentuk semangat untuk terus belajar.
+                        </p>
+
+                    </div>
+
+                    <!-- SMP -->
+                    <div class="relative pl-8 sm:pl-12 pb-10 border-l-2 border-pink-300/40 dark:border-pink-500/30 last:border-l-0 last:pb-0">
+
+                        <div class="absolute left-[-9px] top-0 w-4 h-4 bg-pink-500 rounded-full border-2 border-white dark:border-gray-900"></div>
+
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 mb-2">
+                            <span class="text-sm font-semibold text-pink-600 dark:text-pink-400 bg-pink-50 dark:bg-pink-950/30 px-3 py-1 rounded-full inline-block w-fit">2018 - 2021</span>
+                            <h4 class="text-lg font-bold text-gray-900 dark:text-white">MTs. Al-Islamiyah</h4>
+                        </div>
+
+                        <!-- Location -->
+                        <p class="mt-2 mb-3 text-sm text-gray-500 dark:text-gray-400">
+                            Jl. H. Murhidi, Desa Tonjong, Kecamatan Tajurhalang, Kabupaten Bogor, Jawa Barat.
+                        </p>
+
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Awal perjalanan pendidikan saya dimulai di SD Negeri Kandang Panjang 03, tempat saya belajar berbagai ilmu dasar serta membentuk semangat untuk terus belajar.
+                        </p>
+
+                        <!-- Deskripsi -->
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Melanjutkan pendidikan di MTs. Al-Islamiyah dan memperoleh banyak pengalaman belajar, baik dalam bidang akademik maupun kegiatan sekolah yang membantu membentuk karakter, kedisiplinan, dan tanggung jawab.
+                        </p>
+
+                    </div>
+
+                    <!-- SMK -->
+                    <div class="relative pl-8 sm:pl-12 pb-10 border-l-2 border-pink-300/40 dark:border-pink-500/30 last:border-l-0 last:pb-0">
+
+                        <div class="absolute left-[-9px] top-0 w-4 h-4 bg-pink-500 rounded-full border-2 border-white dark:border-gray-900"></div>
+
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 mb-2">
+                            <span class="text-sm font-semibold text-pink-600 dark:text-pink-400 bg-pink-50 dark:bg-pink-950/30 px-3 py-1 rounded-full inline-block w-fit">2021 - 2024</span>
+                            <h4 class="text-lg font-bold text-gray-900 dark:text-white">SMK Arrahmaniyah</h4>
+                        </div>
+
+                        <!-- Location -->
+                        <p class="mt-2 mb-3 text-sm text-gray-500 dark:text-gray-400">
+                            Jl. H. Murhidi, Desa Tonjong, Kecamatan Tajurhalang, Kabupaten Bogor, Jawa Barat.
+                        </p>
+
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Awal perjalanan pendidikan saya dimulai di SD Negeri Kandang Panjang 03, tempat saya belajar berbagai ilmu dasar serta membentuk semangat untuk terus belajar.
+                        </p>
+
+                        <!-- Deskripsi -->
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Menempuh pendidikan pada jurusan Akuntansi dan Keuangan Lembaga (AKL). Selama masa sekolah saya mempelajari dasar-dasar akuntansi, pengelolaan keuangan, administrasi, serta meningkatkan kemampuan bekerja secara teliti dan terstruktur.
+                        </p>
+
+                    </div>
+
+                    <!-- S1 Teknik Informatika -->
+                    <div class="relative pl-8 sm:pl-12 pb-0 border-l-2 border-pink-300/40 dark:border-pink-500/30 last:border-l-0 last:pb-0">
+
+                        <div class="absolute left-[-9px] top-0 w-4 h-4 bg-pink-500 rounded-full border-2 border-white dark:border-gray-900"></div>
+
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 mb-2">
+                            <span class="text-sm font-semibold text-pink-600 dark:text-pink-400 bg-pink-50 dark:bg-pink-950/30 px-3 py-1 rounded-full inline-block w-fit">2024 - Sekarang</span>
+                            <h4 class="text-lg font-bold text-gray-900 dark:text-white">S1 Teknik Informatika</h4>
+                        </div>
+
+                        <!-- Location -->
+                        <p class="mt-2 mb-3 text-sm text-gray-500 dark:text-gray-400">
+                            Jl. Parung Hijau, Desa Pondok Udik, Kecamatan Kemang, Kabupaten Bogor, Jawa Barat.
+                        </p>
+
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Awal perjalanan pendidikan saya dimulai di SD Negeri Kandang Panjang 03, tempat saya belajar berbagai ilmu dasar serta membentuk semangat untuk terus belajar.
+                        </p>
+
+                        <!-- Deskripsi -->
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Saat ini saya sedang menempuh pendidikan S1 Teknik Informatika. Saya terus belajar dan mengembangkan kemampuan di bidang pengembangan web melalui perkuliahan, pembelajaran mandiri, dan berbagai proyek pribadi.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================================================= -->
+        <!--                   SKILLS SECTION                   -->
+        <!-- ================================================= -->
+        <section id="skills" class="py-16 md:py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
+            <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+                    <span class="inline-block text-sm font-semibold text-pink-600 dark:text-pink-400 uppercase tracking-wider mb-2">Keahlian</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
+                        <span class="text-pink-600 dark:text-pink-400">Skills</span> &amp; Teknologi
+                    </h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-pink-500 to-pink-300 mx-auto mt-4 rounded-full"></div>
+                    <p class="mt-4 text-gray-600 dark:text-gray-400 text-lg">
+                        Berbagai keahlian dan teknologi yang saya kuasai.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+                    <!-- Frontend -->
+                    <div class="p-6 rounded-2xl bg-gray-50/80 dark:bg-gray-900/60 border border-gray-200/50 dark:border-gray-800/50 transition-colors duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <svg class="w-6 h-6 text-pink-500 dark:text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white">Frontend</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300 border border-pink-200/30 dark:border-pink-500/20">HTML</span>
+                            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300 border border-pink-200/30 dark:border-pink-500/20">CSS</span>
+                            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300 border border-pink-200/30 dark:border-pink-500/20">Tailwind CSS</span>
+                            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300 border border-pink-200/30 dark:border-pink-500/20">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <!-- Programming -->
+                    <div class="p-6 rounded-2xl bg-gray-50/80 dark:bg-gray-900/60 border border-gray-200/50 dark:border-gray-800/50 transition-colors duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <svg class="w-6 h-6 text-pink-500 dark:text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                            </svg>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white">Programming</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300 border border-pink-200/30 dark:border-pink-500/20">Python</span>
+                            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300 border border-pink-200/30 dark:border-pink-500/20">Java</span>
+                        </div>
+                    </div>
+
+                    <!-- Database -->
+                    <div class="p-6 rounded-2xl bg-gray-50/80 dark:bg-gray-900/60 border border-gray-200/50 dark:border-gray-800/50 transition-colors duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <svg class="w-6 h-6 text-pink-500 dark:text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4zm0 5c0 2.21 3.582 4 8 4s8-1.79 8-4" />
+                            </svg>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white">Database</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300 border border-pink-200/30 dark:border-pink-500/20">MySQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="p-6 rounded-2xl bg-gray-50/80 dark:bg-gray-900/60 border border-gray-200/50 dark:border-gray-800/50 transition-colors duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <svg class="w-6 h-6 text-pink-500 dark:text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white">Tools</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300 border border-pink-200/30 dark:border-pink-500/20">VS Code</span>
+                            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300 border border-pink-200/30 dark:border-pink-500/20">GitHub</span>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="p-6 rounded-2xl bg-gray-50/80 dark:bg-gray-900/60 border border-gray-200/50 dark:border-gray-800/50 transition-colors duration-300">
+                        <div class="flex items-center gap-3 mb-4">
+                            <svg class="w-6 h-6 text-pink-500 dark:text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white">Soft Skills</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300 border border-pink-200/30 dark:border-pink-500/20">Problem Solving</span>
+                            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300 border border-pink-200/30 dark:border-pink-500/20">Teamwork</span>
+                            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300 border border-pink-200/30 dark:border-pink-500/20">Communication</span>
+                            <span class="px-3 py-1.5 text-sm font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300 border border-pink-200/30 dark:border-pink-500/20">Fast Learning</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================================================= -->
+        <!--                  PROJECTS SECTION                  -->
+        <!-- ================================================= -->
+        <section id="projects" class="py-16 md:py-24 bg-gray-50/80 dark:bg-gray-900/50 transition-colors duration-300">
+            <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+                    <span class="inline-block text-sm font-semibold text-pink-600 dark:text-pink-400 uppercase tracking-wider mb-2">Portfolio</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
+                        <span class="text-pink-600 dark:text-pink-400">Project</span> Saya
+                    </h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-pink-500 to-pink-300 mx-auto mt-4 rounded-full"></div>
+                    <p class="mt-4 text-gray-600 dark:text-gray-400 text-lg">
+                        Beberapa project yang telah saya kerjakan.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+                    <!-- Project 1 -->
+                    <article class="rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200/50 dark:border-gray-800/50 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden">
+                            <img src="assets/images/project-1.jpg" alt="Screenshot Project 1" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
+                        </div>
+                        <div class="p-5 md:p-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Project 1</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">Belum ada Project.</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300">HTML</span>
+                                <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300">CSS</span>
+                                <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300">JavaScript</span>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="#" class="inline-flex items-center text-sm font-medium text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 transition-colors">
+                                    <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                    GitHub
+                                </a>
+                                <a href="#" class="inline-flex items-center text-sm font-medium text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 transition-colors">
+                                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200/50 dark:border-gray-800/50 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden">
+                            <img src="assets/images/project-2.jpg" alt="Screenshot Project 2" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
+                        </div>
+                        <div class="p-5 md:p-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Project 2</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">Belum ada Project.</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300">HTML</span>
+                                <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300">CSS</span>
+                                <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300">JavaScript</span>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="#" class="inline-flex items-center text-sm font-medium text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 transition-colors">
+                                    <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                    GitHub
+                                </a>
+                                <a href="#" class="inline-flex items-center text-sm font-medium text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 transition-colors">
+                                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200/50 dark:border-gray-800/50 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="aspect-video bg-gray-200 dark:bg-gray-800 overflow-hidden">
+                            <img src="assets/images/project-3.jpg" alt="Screenshot Project 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
+                        </div>
+                        <div class="p-5 md:p-6">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Project 3</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">Belum ada Project.</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300">HTML</span>
+                                <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300">CSS</span>
+                                <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-pink-100 text-pink-700 dark:bg-pink-950/40 dark:text-pink-300">JavaScript</span>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="#" class="inline-flex items-center text-sm font-medium text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 transition-colors">
+                                    <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                    GitHub
+                                </a>
+                                <a href="#" class="inline-flex items-center text-sm font-medium text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 transition-colors">
+                                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================================================= -->
+        <!--                 CERTIFICATES SECTION               -->
+        <!-- ================================================= -->
+        <section id="certificates" class="py-16 md:py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
+            <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+                    <span class="inline-block text-sm font-semibold text-pink-600 dark:text-pink-400 uppercase tracking-wider mb-2">Penghargaan</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
+                        <span class="text-pink-600 dark:text-pink-400">Sertifikat</span>
+                    </h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-pink-500 to-pink-300 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <!-- Certificate 1 -->
+                        <div class="p-6 rounded-2xl bg-gray-50/80 dark:bg-gray-900/60 border border-gray-200/50 dark:border-gray-800/50 text-center transition-colors duration-300">
+
+                    <!-- Icon -->
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-pink-100 dark:bg-pink-950/40 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-pink-500 dark:text-pink-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+
+                        <path stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+
+                    <!-- Certificate Name -->
+                    <h4 class="text-base font-bold text-gray-900 dark:text-white mb-1">
+                    Sidang Prakerin
+                    </h4>
+
+                    <!-- Organizer -->
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                    SMK Arrahmaniyah
+                    </p>
+
+                    <!-- Year -->
+                    <span class="inline-block mt-2 text-xs font-medium text-pink-600 dark:text-pink-400 bg-pink-50 dark:bg-pink-950/30 px-3 py-1 rounded-full">
+                    2023
+                    </span>
+
+                    <!-- Button -->
+                    <div class="mt-4">
+                        <a
+                            href="assets/certificates/sidang_prakerin.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center text-sm font-medium text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 transition-colors">
+
+                            Lihat Sertifikat
+
+                        <svg class="w-4 h-4 ml-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+
+                        <path stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+
+                        </a>
+                    </div>
+
+                    </div>
+
+                    <!-- Certificate 2 -->
+                        <div class="p-6 rounded-2xl bg-gray-50/80 dark:bg-gray-900/60 border border-gray-200/50 dark:border-gray-800/50 text-center transition-colors duration-300">
+
+                    <!-- Icon -->
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-pink-100 dark:bg-pink-950/40 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-pink-500 dark:text-pink-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+
+                        <path stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+
+                    <!-- Certificate Name -->
+                    <h4 class="text-base font-bold text-gray-900 dark:text-white mb-1">
+                    Accounting and Tax Compotition
+                    </h4>
+
+                    <!-- Organizer -->
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Universitas Trisakti
+                    </p>
+
+                    <!-- Year -->
+                    <span class="inline-block mt-2 text-xs font-medium text-pink-600 dark:text-pink-400 bg-pink-50 dark:bg-pink-950/30 px-3 py-1 rounded-full">
+                    2023
+                    </span>
+
+                    <!-- Button -->
+                    <div class="mt-4">
+                        <a
+                            href="assets/certificates/accounting_competition.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center text-sm font-medium text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 transition-colors">
+
+                            Lihat Sertifikat
+
+                        <svg class="w-4 h-4 ml-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+
+                        <path stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+
+                        </a>
+                    </div>
+
+                    </div>
+
+                    <!-- Certificate 3 -->
+                        <div class="p-6 rounded-2xl bg-gray-50/80 dark:bg-gray-900/60 border border-gray-200/50 dark:border-gray-800/50 text-center transition-colors duration-300">
+
+                    <!-- Icon -->
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-pink-100 dark:bg-pink-950/40 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-pink-500 dark:text-pink-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+
+                        <path stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+
+                    <!-- Certificate Name -->
+                    <h4 class="text-base font-bold text-gray-900 dark:text-white mb-1">
+                    Bedah Buku "Pemrograman Beorientasi Objek di Era Digital"
+                    </h4>
+
+                    <!-- Organizer -->
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Penerbit Wawasan Ilmu
+                    </p>
+
+                    <!-- Year -->
+                    <span class="inline-block mt-2 text-xs font-medium text-pink-600 dark:text-pink-400 bg-pink-50 dark:bg-pink-950/30 px-3 py-1 rounded-full">
+                    2025
+                    </span>
+
+                    <!-- Button -->
+                    <div class="mt-4">
+                        <a
+                            href="assets/certificates/bedahbuku_pbo.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center text-sm font-medium text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 transition-colors">
+
+                            Lihat Sertifikat
+
+                        <svg class="w-4 h-4 ml-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+
+                        <path stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+
+                        </a>
+                    </div>
+
+                    </div>
+
+                    <!-- Certificate 4 -->
+                        <div class="p-6 rounded-2xl bg-gray-50/80 dark:bg-gray-900/60 border border-gray-200/50 dark:border-gray-800/50 text-center transition-colors duration-300">
+
+                    <!-- Icon -->
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-pink-100 dark:bg-pink-950/40 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-pink-500 dark:text-pink-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+
+                        <path stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+
+                    <!-- Certificate Name -->
+                    <h4 class="text-base font-bold text-gray-900 dark:text-white mb-1">
+                    Wordpress Introduction
+                    </h4>
+
+                    <!-- Organizer -->
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                    MySkill Short Class
+                    </p>
+
+                    <!-- Year -->
+                    <span class="inline-block mt-2 text-xs font-medium text-pink-600 dark:text-pink-400 bg-pink-50 dark:bg-pink-950/30 px-3 py-1 rounded-full">
+                    2025
+                    </span>
+
+                    <!-- Button -->
+                    <div class="mt-4">
+                        <a
+                            href="assets/certificates/myskill_shortclass.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center text-sm font-medium text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 transition-colors">
+
+                            Lihat Sertifikat
+
+                        <svg class="w-4 h-4 ml-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+
+                        <path stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+
+                        </a>
+                    </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================================================= -->
+        <!--                   CONTACT SECTION                  -->
+        <!-- ================================================= -->
+        <section id="contact" class="py-16 md:py-24 bg-gray-50/80 dark:bg-gray-900/50 transition-colors duration-300">
+            <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+                    <span class="inline-block text-sm font-semibold text-pink-600 dark:text-pink-400 uppercase tracking-wider mb-2">Hubungi Saya</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
+                        Get In <span class="text-pink-600 dark:text-pink-400">Touch</span>
+                    </h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-pink-500 to-pink-300 mx-auto mt-4 rounded-full"></div>
+                    <p class="mt-4 text-gray-600 dark:text-gray-400 text-lg">
+                        Jangan ragu untuk menghubungi saya untuk kolaborasi atau pertanyaan.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+
+                    <!-- Contact Info - Left Column -->
+                    <div>
+
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Mari Terhubung</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+                            Saya selalu terbuka untuk berdiskusi tentang proyek, kolaborasi, atau sekadar berkenalan. Jangan sungkan untuk menghubungi saya melalui salah satu platform di bawah ini.
+                        </p>
+
+                        <div class="space-y-5">
+
+                            <!-- Email -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-pink-100 dark:bg-pink-950/40 flex items-center justify-center text-pink-600 dark:text-pink-400 flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Email</p>
+                                    <a href="mailto:deayura25@gmail.com" class="text-gray-800 dark:text-gray-200 hover:text-pink-600 dark:hover:text-pink-400 transition-colors">deayura25@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <!-- LinkedIn -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-pink-100 dark:bg-pink-950/40 flex items-center justify-center text-pink-600 dark:text-pink-400 flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">LinkedIn</p>
+                                    <a href="https://www.linkedin.com/in/ade-ayu-wandira"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-gray-800 dark:text-gray-200 hover:text-pink-600 dark:hover:text-pink-400 transition-colors">
+                                        linkedin.com/in/ade-ayu-wandira
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- GitHub -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-pink-100 dark:bg-pink-950/40 flex items-center justify-center text-pink-600 dark:text-pink-400 flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">GitHub</p>
+                                    <a href="https://github.com/deayu1703"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-gray-800 dark:text-gray-200 hover:text-pink-600 dark:hover:text-pink-400 transition-colors">
+                                        github.com/deayu1703
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Instagram -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-pink-100 dark:bg-pink-950/40 flex items-center justify-center text-pink-600 dark:text-pink-400 flex-shrink-0">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Instagram</p>
+                                    <a href="https://www.instagram.com/de.ayu17_/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-gray-800 dark:text-gray-200 hover:text-pink-600 dark:hover:text-pink-400 transition-colors">
+                                        @de.ayu17_
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Contact Form - Right Column -->
+                    <div>
+
+                        <form id="contact-form" class="space-y-5" novalidate>
+
+                            <!-- Name -->
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required class="w-full px-4 py-3 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 outline-none transition-all duration-300" />
+                            </div>
+
+                            <!-- Email -->
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">Alamat Email</label>
+                                <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required class="w-full px-4 py-3 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 outline-none transition-all duration-300" />
+                            </div>
+
+                            <!-- Message -->
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">Pesan</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda..." required class="w-full px-4 py-3 rounded-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 outline-none transition-all duration-300 resize-none"></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3.5 bg-pink-600 hover:bg-pink-700 dark:bg-pink-500 dark:hover:bg-pink-600 text-white font-semibold rounded-xl shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transition-all duration-300">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                                </svg>
+                                Kirim Pesan
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================================================= -->
+    <!--                     FOOTER                         -->
+    <!-- ================================================= -->
+    <footer class="bg-gray-900 dark:bg-gray-950 border-t border-gray-800/30 dark:border-white/5 transition-colors duration-300">
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Logo & Description -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <a href="#" class="text-2xl font-extrabold tracking-tight text-white hover:text-pink-400 transition-colors">
+                        Ade Ayu<span class="text-pink-500">.</span>
+                    </a>
+                    <p class="mt-3 text-sm text-gray-400 leading-relaxed max-w-xs">
+                        Mahasiswi Teknik Informatika dengan passion di web development dan teknologi.
+                    </p>
+                    <div class="mt-4 flex gap-4">
+
+                        <!-- GitHub -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-pink-400 transition-colors" aria-label="GitHub">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-pink-400 transition-colors" aria-label="LinkedIn">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-pink-400 transition-colors" aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Quick Navigation -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Navigasi</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#home" class="text-sm text-gray-400 hover:text-pink-400 transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-sm text-gray-400 hover:text-pink-400 transition-colors">About</a></li>
+                        <li><a href="#education" class="text-sm text-gray-400 hover:text-pink-400 transition-colors">Education</a></li>
+                        <li><a href="#skills" class="text-sm text-gray-400 hover:text-pink-400 transition-colors">Skills</a></li>
+                        <li><a href="#projects" class="text-sm text-gray-400 hover:text-pink-400 transition-colors">Projects</a></li>
+                        <li><a href="#certificates" class="text-sm text-gray-400 hover:text-pink-400 transition-colors">Certificates</a></li>
+                        <li><a href="#contact" class="text-sm text-gray-400 hover:text-pink-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Links -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Media Sosial</h4>
+                    <ul class="space-y-2.5">
+                        <li>
+                            <a href="https://github.com/deayu1703"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-sm text-gray-400 hover:text-pink-400 transition-colors">
+                                GitHub
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/in/ade-ayu-wandira"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-sm text-gray-400 hover:text-pink-400 transition-colors">
+                                LinkedIn
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/de.ayu17_/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-sm text-gray-400 hover:text-pink-400 transition-colors">
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Hubungi</h4>
+                    <ul class="space-y-2.5">
+                        <li class="text-sm text-gray-400 flex items-center gap-2">
+                            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            deayura25@gmail.com
+                        </li>
+                    
+                        <li class="text-sm text-gray-400 flex items-center gap-2">
+                            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            Indonesia
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Divider & Copyright -->
+            <div class="border-t border-gray-800/50 dark:border-white/5 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                    &copy; 2026 <span class="text-pink-500">Ade Ayu</span>. All rights reserved.
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                    Built with <span class="text-pink-500">❤</span> using Tailwind CSS
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top" type="button" class="fixed bottom-6 right-6 z-40 p-3.5 rounded-full bg-pink-600 hover:bg-pink-700 dark:bg-pink-500 dark:hover:bg-pink-600 text-white shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transition-all duration-300 opacity-0 invisible translate-y-4" aria-label="Back to top">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+        </button>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
