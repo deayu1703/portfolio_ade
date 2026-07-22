@@ -1,24 +1,24 @@
-# 🌸 Ade Ayu - Personal Portfolio
+# Ade Ayu - Personal Portfolio
 
 Selamat datang di repository portfolio pribadi saya.
 
 Website ini dibuat untuk menampilkan informasi mengenai diri saya, pendidikan, kemampuan, sertifikat, serta menyediakan media komunikasi bagi recruiter maupun pihak yang ingin berkolaborasi.
 
-## ✨ Fitur
+## Fitur
 
-- 🌙 Dark Mode
-- 📱 Responsive Design
-- 👩‍💻 Hero Section
-- 🙋 Tentang Saya
-- 🎓 Riwayat Pendidikan
-- 🛠️ Skills
-- 💼 Projects
-- 📜 Certificates
-- 📄 Download CV
-- 📩 Contact Form menggunakan EmailJS
-- 🔗 Social Media Links
+-  Dark Mode
+-  Responsive Design
+-  Hero Section
+-  Tentang Saya
+-  Riwayat Pendidikan
+-  Skills
+-  Projects
+-  Certificates
+-  Download CV
+-  Contact Form menggunakan EmailJS
+-  Social Media Links
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 - HTML5
 - Tailwind CSS v4
@@ -43,7 +43,7 @@ portfolio_ade/
 └── README.md
 ```
 
-## 🚀 Menjalankan Project
+## Menjalankan Project
 
 1. Clone repository
 
@@ -71,9 +71,9 @@ npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch
 
 5. Jalankan menggunakan Live Server.
 
-## 📬 Contact
+## Contact
 
-📧 Email : **deayura25@gmail.com**
+Email : **deayura25@gmail.com**
 
 GitHub : https://github.com/deayu1703
 
@@ -83,4 +83,4 @@ Instagram : https://instagram.com/de.ayu17_
 
 ---
 
-⭐ Terima kasih telah mengunjungi repository ini.
+Terima kasih telah mengunjungi repository ini.
