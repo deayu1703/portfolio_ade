@@ -78,3 +78,24 @@ form.addEventListener("submit", function (e) {
     });
 
 });
+
+// ======================================
+// Hamburger Menu
+// ======================================
+
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+
+hamburgerBtn.addEventListener("click", () => {
+
+    const isOpen = hamburgerBtn.getAttribute("aria-expanded") === "true";
+
+    hamburgerBtn.setAttribute("aria-expanded", !isOpen);
+
+    mobileMenu.classList.toggle("max-h-0");
+    mobileMenu.classList.toggle("max-h-96");
+
+    mobileMenu.classList.toggle("opacity-0");
+    mobileMenu.classList.toggle("opacity-100");
+
+});
